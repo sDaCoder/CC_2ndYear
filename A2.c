@@ -42,18 +42,19 @@ int sSum(int* arr, int size)
             }
         }
     }
-    if (is7)
-    {
-        return (sumArr(arr, size) - result);
-    }
-    else return sumArr(arr, size);
+    return is7? (sumArr(arr, size) - result) : sumArr(arr, size);
+    // if (is7)
+    // {
+    //     return (sumArr(arr, size) - result);
+    // }
+    // else return sumArr(arr, size);
     
 }
 
 void main()
 {
     system("cls");
-    int arr[] = {10, 3, 1, 2, 9};
+    int arr[] = {10, 3, 6, 1, 2, 7, 9};
     int size = sizeof(arr) / sizeof(int);
     printf("%d\n", sumArr(arr, size));
     printf("%d\n", sSum(arr, size));
